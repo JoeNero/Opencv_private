@@ -16,12 +16,37 @@ Opencv_private
 
 ## 1.1 图片的读取
 
-    image = imread("timg.jpg");                                         // Read the file
+	mImage.cpp
+    image = imread("timg.jpg");                                       
 
 ## 1.2 图片的腐蚀
 
-	getStructuringElement()可以生成形态学操作中用到的核
+	mErode.cpp
+	
+	//getStructuringElement()可以生成形态学操作中用到的核
 	Mat element = getStructuringElement(MORPH_RECT, Size(15, 15));
 	erode(image, dstImage, element);
+	
+## 1.3 灰度化
+
+	CV_BGR2GRAY
+	CV_THRESH_BINARY
+
+	使用上列宏需要加入以下头文件
+	#include <opencv2\imgproc\imgproc.hpp>
+	#include "opencv2/imgproc/types_c.h"
+		
+	cvtColor(img, imgGray, CV_BGR2GRAY);
+
+## 1.4 图像模糊
+
+	mBlur.cpp
+	blur(image, dstImage,Size(7,7));
+
+## 1.5 边缘检测
+	
+	Canny算子边缘检测
+	mCanny.cpp
+	Canny(imgGray,imgEdge,3,9,3);
 	
 	

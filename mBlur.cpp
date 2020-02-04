@@ -1,7 +1,7 @@
 /*
 创建者	:	XTT
 功能	:	OpenCV
-            图像腐蚀
+            图像模糊
 时间	:	2020/01/08
 */
 #define _CRTSECURE_NO_WARINGS
@@ -23,14 +23,13 @@ int main(int argc,char** argv)
         return -1;
     }
  //   namedWindow("Display window", WINDOW_AUTOSIZE);                    
-    imshow("Display1 window", image);     
+    imshow("原图window", image);     
 
-    //getStructuringElement()可以生成形态学操作中用到的核
-    Mat element = getStructuringElement(MORPH_RECT, Size(15, 15));
+    //Size 尺寸类
+    blur(image, dstImage,Size(7,7));
 
-    erode(image, dstImage, element);
-                                                            
-    imshow("Display2 window", dstImage);
+    imshow("模糊后window", dstImage);
+
     waitKey(0);
     return 0;
 }
