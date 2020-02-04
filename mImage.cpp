@@ -26,6 +26,7 @@ int main()
     namedWindow("Display window", WINDOW_AUTOSIZE);                     // Create a window for display.
     imshow("Display window", image);                                    // Show our image inside it.
 
+	imwrite("±£´æµÄÍ¼.jpg",img);
     waitKey(0);                                                         // Wait for a keystroke in the window
 
     std::cout << "Hello World!\n";

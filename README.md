@@ -1,6 +1,6 @@
 # Opencv_private
-Opencv_private
 
+		Mat类可以分为两个部分：矩阵头和指向像素数据的矩阵指针。
 
 		argc和argv参数在用命令行编译程序时有用。main( int argc, char* argv[], char **env ) 中 
         第一个参数，int型的argc，为整型，用来统计程序运行时发送给main函数的命令行参数的个数，在VS中默认值为1。 
@@ -14,11 +14,17 @@ Opencv_private
 		
 # 1图片
 
-## 1.1 图片的读取
+## 1.1 加载修改图像
 
 	mImage.cpp
+	
+	加载图像 cv::imread
+	修改图像 cv::cvtColor
+	保存图像 cv::imwrite
+	
     image = imread("timg.jpg");                                       
-
+	imwrite("保存的图.jpg",img);
+	
 ## 1.2 图片的腐蚀
 
 	mErode.cpp
