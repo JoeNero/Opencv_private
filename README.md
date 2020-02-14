@@ -12,6 +12,9 @@
         argv[argc]为NULL 
         第三个参数，char**型的env，为字符串数组。env[]的每一个元素都包含ENVVAR=value形式的字符串，其中ENVVAR为环境变量，value为其对应的值。平时使用到的比较少。
 		
+		waitKey(); 
+		//waitKey(0);  有的版本会报内存异常 
+		
 # 1图片
 
 ## 1.1 加载修改图像
